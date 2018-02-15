@@ -1,7 +1,7 @@
 def withdraw(balance, request):
 	print("Current balance = " + str(balance))
 
-	result = balance
+	result = balance - reqest
 
 	if request > balance:
 		print("Can't give you all this money !!")
@@ -10,7 +10,7 @@ def withdraw(balance, request):
 		print("More than zero plz!")
 
 	else:
-		while request > 0 and request <= balance:
+		while request > 0:
 			if request >= 100:
 				request -= 100
 				print("give 100")
@@ -31,7 +31,7 @@ def withdraw(balance, request):
 				print("give " + str(request))
 				request = 0
 
-	return balance - request
+	return result
 
 
 balance = 500
